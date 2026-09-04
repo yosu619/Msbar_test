@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "msbar-site",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\妹尾洋介\\AppData\\Local\\Temp\\claude\\C--Users------Desktop-SEO-Design-033-Msbar-code\\94dca53f-e426-4fec-90de-c1965baea935\\scratchpad\\serve.ps1"],
+      "port": 8033
+    }
+  ]
+}
