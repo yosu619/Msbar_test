@@ -84,18 +84,19 @@
   if (showIntro) {
     overlay = document.createElement('div');
     overlay.className = 'site-opening';
+    overlay.tabIndex = -1;
+    overlay.style.outline = 'none';
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
     overlay.setAttribute('aria-label', 'M’s BAR オープニング');
-    overlay.innerHTML = '<div class="site-opening__curtain site-opening__curtain--left"></div><div class="site-opening__curtain site-opening__curtain--right"></div><div class="site-opening__center"><p class="site-opening__eyebrow">YOUR NIGHT STARTS HERE</p><div class="site-opening__logo"><img src="assets/img/logo-gold.png" width="800" height="566" alt="M’s BAR Karaoke" fetchpriority="high"></div><p class="site-opening__message">今夜も、心ほどけるひとときを。</p><div class="site-opening__line" aria-hidden="true"><span></span></div><p class="site-opening__status" role="status">WELCOME TO M’S BAR</p></div><button class="site-opening__skip" type="button">スキップ <span aria-hidden="true">↗</span></button>';
+    overlay.innerHTML = '<div class="site-opening__curtain site-opening__curtain--left"></div><div class="site-opening__curtain site-opening__curtain--right"></div><div class="site-opening__center"><p class="site-opening__eyebrow">YOUR NIGHT STARTS HERE</p><div class="site-opening__logo"><img src="assets/img/logo.svg" width="800" height="566" alt="M’s BAR Karaoke" fetchpriority="high"></div><p class="site-opening__message">今夜も、心ほどけるひとときを。</p><div class="site-opening__line" aria-hidden="true"><span></span></div><p class="site-opening__status" role="status">WELCOME TO M’S BAR</p></div>';
     document.body.appendChild(overlay);
     root.classList.add('intro-pending');
-    overlay.querySelector('button').addEventListener('click', function () { open(true); });
     overlay.addEventListener('pointerdown', function () { keyboardInteraction = false; });
     overlay.addEventListener('keydown', function (event) {
       keyboardInteraction = true;
       if (event.key === 'Escape') { event.preventDefault(); open(true); }
-      if (event.key === 'Tab') { event.preventDefault(); overlay.querySelector('button').focus(); }
+      if (event.key === 'Tab') { event.preventDefault(); open(true); }
     });
     // Never leave the page behind an entrance if an asset or script stalls.
     watchdog = setTimeout(function () { open(true); }, 4500);
@@ -108,7 +109,7 @@
         el.inert = true;
       }
     });
-    overlay.querySelector('button').focus({ preventScroll: true });
+    overlay.focus({ preventScroll: true });
     var heroLogo = document.querySelector('.hero__logo');
     var waitForLogo = heroLogo && heroLogo.decode ? heroLogo.decode().catch(function () {}) : Promise.resolve();
     var fonts = document.fonts ? document.fonts.ready : Promise.resolve();

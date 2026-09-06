@@ -37,7 +37,8 @@
 
   // スクロール連動フェードイン
   var fadeTargets = document.querySelectorAll('.js-fade');
-  if ('IntersectionObserver' in window) {
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.documentElement.classList.add('reveal-enabled');
     var observer = new IntersectionObserver(
       function (entries) {
         entries.forEach(function (entry) {
