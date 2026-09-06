@@ -25,6 +25,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
+  <link rel="stylesheet" href="assets/css/opening.css">
+  <link rel="stylesheet" href="assets/css/gallery.css">
 
   <!-- 構造化データ -->
   <script type="application/ld+json">
@@ -51,6 +54,7 @@
   </script>
 </head>
 <body id="top">
+  <script src="assets/js/opening.js"></script>
 
   <!-- ヘッダー -->
   <header class="header" id="js-header">
@@ -81,31 +85,38 @@
   <main>
 
     <!-- メインビジュアル -->
-    <section class="hero">
+    <section class="hero hero--refined" aria-label="M's BARへようこそ">
       <div class="hero__sparkle" aria-hidden="true"></div>
       <div class="hero__frame">
         <div class="hero__inner">
-          <p class="hero__lead">Karaoke &amp; Bar in Iizuka</p>
-          <h1 class="hero__title">
-            <img src="assets/img/logo.jpg" alt="M's BAR Karaoke（エムズバー）飯塚のカラオケバー" width="1200" height="1200" class="hero__logo">
-          </h1>
-          <p class="hero__catch">歌って、乾杯して、つながる。<br>飯塚の夜に、あなたの居場所を。</p>
-          <div class="hero__badges">
-            <p class="hero__badge">カラオケ<br><strong>歌い放題</strong></p>
-            <p class="hero__badge">ドリンク<br><strong>飲み放題</strong></p>
-            <p class="hero__badge">初回限定<br><strong>延長60分無料</strong></p>
+          <div class="hero__brand-panel">
+            <p class="hero__lead">Karaoke &amp; Bar in Iizuka</p>
+            <h1 class="hero__title">
+              <img src="assets/img/logo.jpg" alt="M's BAR Karaoke（エムズバー）飯塚のカラオケバー" width="1200" height="1200" fetchpriority="high" decoding="async" class="hero__logo">
+            </h1>
+            <p class="hero__brand-note"><span>IIZUKA, FUKUOKA</span><span>DRINK · SING · CONNECT</span></p>
           </div>
-          <div class="hero__cta">
-            <a href="tel:08087139969" class="btn btn--gold">
-              <span class="btn__icon">&#9742;</span>電話で問い合わせる
-            </a>
-            <a href="https://line.me/R/ti/p/%40369zmuan" target="_blank" rel="noopener noreferrer" class="btn btn--line">
-              <span class="btn__icon">&#128172;</span>LINEで友だち追加
-            </a>
+          <div class="hero__content">
+            <p class="hero__eyebrow"><span aria-hidden="true"></span> A NIGHT TO REMEMBER</p>
+            <p class="hero__catch">歌って、<br>乾杯して、<br><em>つながる。</em></p>
+            <p class="hero__description">飯塚の夜に、あなたの居場所を。</p>
+            <div class="hero__badges">
+              <p class="hero__badge">カラオケ<strong>歌い放題</strong></p>
+              <p class="hero__badge">ドリンク<strong>飲み放題</strong></p>
+            </div>
+            <p class="hero__welcome"><span>初回限定</span>延長60分無料</p>
+            <div class="hero__cta">
+              <a href="tel:08087139969" class="btn btn--gold">
+                <span>電話で問い合わせる</span><span aria-hidden="true">↗</span>
+              </a>
+              <a href="https://line.me/R/ti/p/%40369zmuan" target="_blank" rel="noopener noreferrer" class="btn btn--line">
+                <span>LINEで友だち追加</span><span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="hero__scroll" aria-hidden="true"><span>Scroll</span></div>
+      <a class="hero__scroll" href="#concept"><span>SCROLL TO DISCOVER</span></a>
     </section>
 
     <!-- コンセプト -->
@@ -189,28 +200,28 @@
           <p class="section__desc">ネオンとグリーンが映えるフォトジェニックな空間。<br>カウンターでもソファ席でも、思い思いの夜をお過ごしください。</p>
         </header>
         <div class="interior__gallery">
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-03.jpg" alt="M's BARのカウンター席。木のカウンターにカラフルなスツールが並び、背面の棚にボトルが揃う" width="1108" height="1477" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-01.jpg" alt="ネオンサインとハートのバルーンが飾られた赤いソファのボックス席" width="1108" height="1477" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-04.jpg" alt="カラオケマイクが用意された赤いハイバックソファの半個室風ボックス席" width="1200" height="1600" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-06.jpg" alt="カウンターに並ぶ飲み放題メニューとシャンパン、花のディスプレイ" width="1200" height="1600" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-05.jpg" alt="レザーソファが並ぶ落ち着いた雰囲気のテーブル席" width="1200" height="1600" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-08.jpg" alt="間接照明が灯るゆったりとしたソファ席のフロア全景" width="1108" height="1477" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-02.jpg" alt="グリーンウォールに輝くM's BARのネオンサイン" width="1108" height="1477" loading="lazy">
           </figure>
-          <figure class="interior__item js-fade">
+          <figure class="interior__item">
             <img src="assets/img/interior-07.jpg" alt="壁に飾られたきらびやかなアートフレーム" width="1200" height="1600" loading="lazy">
           </figure>
         </div>
@@ -423,5 +434,6 @@
   </div>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/gallery.js"></script>
 </body>
 </html>
