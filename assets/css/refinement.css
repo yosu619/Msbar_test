@@ -1,0 +1,86 @@
+@charset "UTF-8";
+/* Brand, conversion hierarchy and first-visit information. */
+body { font-size: 16px; }
+.concept .section__title { font-family: var(--font-serif); font-weight: 500; font-size: clamp(27px,4.5vw,42px); letter-spacing: .1em; line-height: 1.65; }
+.concept__body { line-height: 2.2; }
+.section__title { font-weight: 500; }
+.header__line { background: #06a94a; color: #fff; box-shadow: 0 4px 18px #00391633; white-space: nowrap; font-size: 14px; }
+.header__logo-img,.footer__logo-img { object-fit: contain; }
+.hero--refined .hero__title {
+  background: radial-gradient(ellipse at 50% 45%,#b9548777,transparent 68%),linear-gradient(145deg,#76304f,#3b152a);
+}
+.hero--refined .hero__logo { object-fit: contain; }
+.hero--refined .hero__cta { grid-template-columns: 1fr; }
+.hero--refined .hero__cta .btn--line, .btn--line {
+  background: #06a94a; border: 1px solid #18c76a; color: #fff;
+  font-size: 16px; font-weight: 700; padding: 18px 24px;
+  box-shadow: 0 8px 25px #00391626;
+}
+.hero--refined .hero__cta .btn--line:hover,.btn--line:hover { background: #078c40; color: #fff; border-color: #25d777; }
+.hero__secondary-links { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; padding: 4px 0; }
+.social-link { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 12px 4px; font-size: 14px; border-bottom: 1px solid currentColor; }
+.hero__secondary-links .social-link:first-child { color: #f2d479; }
+.hero__secondary-links .social-link:last-child { color: #d9bfcd; }
+.line-cta__btns .btn--insta { background: transparent; color: #fff; border: 1px solid #eac8da; box-shadow: none; font-size: 14px; }
+.line-cta__btns > .social-link { color: #e4cdda; font-size: 14px; align-self: center; }
+.line-cta__title { line-height: 1.8; }
+.faq__list { max-width: 860px; margin: 0 auto; border-top: 1px solid #a6416633; }
+.faq__item { border-bottom: 1px solid #a6416633; }
+.faq__item summary { list-style: none; display: flex; align-items: center; gap: 18px; padding: 24px 8px; cursor: pointer; font-size: 16px; font-weight: 500; color: #7c2c4a; }
+.faq__item summary::-webkit-details-marker { display: none; }
+.faq__item summary::before { content: "Q"; font: 23px var(--font-en); color: #b8862f; }
+.faq__item summary::after { content: "+"; font-size: 25px; margin-left: auto; padding-left: 12px; font-weight: 400; }
+.faq__item[open] summary::after { content: "−"; }
+.faq__answer { padding: 0 40px 26px; color: #604254; line-height: 2; }
+.faq__item[open] .faq__answer { animation: faq-answer .3s ease-out; }
+.faq__contact { text-align: center; margin-top: 35px; }
+.faq__contact p { margin-bottom: 18px; font-size: 15px; }
+.access__map-link { display: inline-flex; align-items: center; gap: 10px; margin-top: 13px; padding: 8px 12px; color: #7c2c4a; border: 1px solid #a6416655; border-radius: 3px; font-size: 14px; }
+.fixed-cta { gap: 0; padding-bottom: env(safe-area-inset-bottom); background: #fff; }
+.fixed-cta .fixed-cta__btn { flex: 1; min-width: 0; font-size: 12px; gap: 5px; padding: 14px 5px; }
+.fixed-cta .fixed-cta__btn--line { flex: 1.65; background: #069b46; color: #fff; font-size: 14px; }
+.fixed-cta .fixed-cta__btn--insta { background: #7c2c4a; color: #fff; }
+.fixed-cta .fixed-cta__btn--map { background: #fff3f8; color: #7c2c4a; }
+.js-fade { opacity: 1; transform: none; }
+.reveal-enabled .js-fade { opacity: 0; transform: translateY(24px); transition: opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1); }
+.reveal-enabled .js-fade.is-visible { opacity: 1; transform: none; }
+a:focus-visible,summary:focus-visible { outline: 2px solid #b8862f; outline-offset: 5px; }
+@keyframes faq-answer { from { opacity: 0; transform: translateY(-5px); } to { opacity: 1; transform: none; } }
+@media(min-width:1024px) { .header__nav-list { gap: 6px; } .header__nav-link { font-size: 12px; padding: 4px; letter-spacing: .03em; } .header__nav { gap: 14px; } .header__line { padding: 10px 14px; } }
+@media(max-width:767px) { .faq__item summary { font-size: 15px; gap: 12px; padding: 20px 0; } .faq__answer { padding: 0 0 22px 30px; font-size: 15px; } }
+@media(prefers-reduced-motion:reduce) { .reveal-enabled .js-fade { opacity: 1; transform: none; transition: none; } .faq__item[open] .faq__answer { animation: none; } }
+.line-cta__btns .btn--insta { color: #7c2c4a; border-color: #a6416677; }
+.line-cta__btns > .social-link { color: #7c2c4a; }
+.header__line,.hero--refined .hero__cta .btn--line,.btn--line,.fixed-cta .fixed-cta__btn--line { background: #067c36; }
+
+.system__payment { max-width: 900px; margin: 28px auto; padding: 24px; background: #fff; border: 1px solid #a6416638; border-left: 3px solid #a64166; border-radius: 4px; line-height: 2; }
+.system__payment h3 { font-family: var(--font-serif); color: #7c2c4a; font-size: 20px; margin-bottom: 10px; }
+.system__payment strong { color: #7c2c4a; }
+.system__payment-example { margin-top: 8px; font-size: 15px; }
+.system__payment-note { font-size: 14px; margin-top: 8px; }
+@media(max-width:767px) { .system__payment { padding: 20px 16px; font-size: 15px; } }
+
+/* Header Instagram remains at the right edge on desktop and mobile. */
+.header__inner { gap: 12px; }
+.header__instagram {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 44px; height: 44px; flex: 0 0 44px; color: #f2d479;
+  border: 1px solid #f2d47966; border-radius: 50%; position: relative; z-index: 110;
+  transition: background .25s ease, color .25s ease;
+}
+.header__instagram:hover { background: #f2d479; color: #7c2c4a; }
+.header__burger { margin-left: auto; flex-shrink: 0; }
+@media(min-width:1200px) { .header__nav { margin-left: auto; } .header__inner { max-width: 1280px; } }
+@media(min-width:1024px) and (max-width:1199px) {
+  .header__inner { padding: 6px 16px; }
+  .header__burger { display: flex; }
+  .header__nav {
+    position: fixed; inset: 0; margin: 0;
+    background: linear-gradient(170deg,#8e3556 0%,#a64166 60%,#c04f7d 100%);
+    flex-direction: column; gap: 32px; opacity: 0; visibility: hidden;
+  }
+  .header__nav.is-open { opacity: 1; visibility: visible; }
+  .header__nav-list { flex-direction: column; gap: 20px; }
+  .header__nav-link { font-size: 17px; padding: 4px 8px; letter-spacing: .1em; }
+}
+@media(prefers-reduced-motion:reduce) { .header__instagram { transition: none; } }
